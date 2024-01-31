@@ -1,0 +1,114 @@
+.smartphones {
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+    .cards {
+      flex-direction: column;
+      border: 2px solid #77777731;
+      border-radius: 8px;
+      width: 250px;
+      transition: all .2s;
+      transform-style: preserve-3d; 
+      color: black;
+      &:hover {
+        .title, .like-icon {
+          color: #fff;
+        }
+        background-color: black;
+        color: grey;
+        transform: rotate3d(100, -0.1, -0.1, 10deg);
+      }
+      cursor: pointer;
+      div {
+        img {
+          border-radius: 6px;
+          width: 100%;
+          height: 150px;
+        }
+      }
+
+      .card-details-sec {
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: -10px;
+        h6 {
+          padding: 0px 20px;
+        }
+        div {
+          padding: 20px 10px 0px 10px;
+          display: flex;
+          justify-content: space-between;
+          height: 40px;
+          .title {
+            line-height: 20px;
+            height: 30px;
+            width: 85%;
+            padding: 0px 10px;
+            font-size: 18px;
+            font-weight: 500;
+          }
+          .like-icon {
+            margin-top: 0px;
+            cursor: pointer;
+            font-size: 22px;
+          }
+          .liked {
+            animation: transitionOfIcon 1s linear;
+            color: red;
+          }
+        }
+
+        .description {
+          position: relative;
+          padding: 0px 10px;
+          width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 546px) {
+  .smartphones {
+    h1 {
+      margin-left: 10%;
+    }
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      .cards {
+        width: 80%;
+        div {
+          img {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes transitionOfIcon {
+  0% {
+    color: rgba(255, 0, 0, 0.193);
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(1.8);
+    color: rgba(255, 0, 0, 0.565);
+  }
+  100% {
+    transform: scale(1);
+    color: red;
+  }
+}
