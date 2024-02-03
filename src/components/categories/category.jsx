@@ -6,6 +6,7 @@ function Categories() {
   return (
     <div className="container-fluid category mt-3">
       <h1>All Categories</h1>
+      <img src="" alt="" />
       <div className="d-flex flex-wrap">
         {arr.map((v, i) => (
           

@@ -41,7 +41,7 @@ const Details = () => {
       </div>
       <div className="product mt-5">
         <div className="row">
-          <div className="col-sm-12 col-md-6">
+          {/* <div className="col-sm-12 col-md-6">
             <div className="box">
               <Carousel useKeyboardArrows={true}>
                 {detail.images.map((URL, index) => (
@@ -51,7 +51,7 @@ const Details = () => {
                 ))}
               </Carousel>
             </div>
-          </div>
+          </div> */}
           <div className="right col-sm-12 col-md-6">
             <div className="details">
               <div>

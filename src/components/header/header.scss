@@ -7,8 +7,12 @@
 
   .top-nav {
     span {
+      cursor: pointer;
       font-size: 14px;
       margin: 0 14px;
+      &:hover {
+        color: rgb(59, 59, 216);
+      }
 
       .top-nav-icon {
         padding: 6px;
@@ -133,10 +137,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
-        font-weight: bold;
-        color: $kayiGreen;
-        span {
+        .modal-button {
+          background-color: transparent;
+          outline: none;
+          border: none;
+          font-weight: bold;
           text-align: center;
           width: 90px;
         }
@@ -157,7 +162,7 @@
           display: none;
         }
         .search-products {
-          width: 400px;
+          width: 100%;
           margin-left: 20px;
         }
       }
@@ -165,14 +170,21 @@
   }
   .search-icons {
     div {
-      width: 100px;
       display: none;
     }
     .sell {
       margin: 0;
-      span {
-        margin: 0;
-        width: 100px;
+      .modal-button {
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        &:hover {
+          color: $kayiGreen;
+        }
+      }
+      .border-image {
+        width: 110px !important;
+        height: 40px;
       }
     }
   }
@@ -196,6 +208,45 @@
       div {
         display: none;
       }
+    }
+  }
+}
+
+.product-modal {
+  .category-dropdown {
+    width: 100%;
+    border: none;
+    &:hover {
+      border-color: $kayiGreen;
+      outline-color: $kayiGreen;
+    }
+  }
+  .input {
+    &:focus {
+      border: $kayiGreen;
+      outline-color: $kayiGreen;
+    }
+  }
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.log-or-signup {
+  display: flex;
+  justify-content: center;
+  .link {
+    text-align: center;
+    border-radius: 4px;
+    background-color: $LightkayiGreen;
+    padding: 10px 14px;
+    color: #fff;
+    margin: 0px 10px;
+    font-weight: bold;
+    width: 11.5rem;
+    &:hover {
+      background-color: none;
     }
   }
 }

@@ -4,6 +4,7 @@ import "./card.scss";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 function ProductCard({ prop }) {
+  console.log(prop)
   const [likedStates, setLikedStates] = useState(
     Array(prop.length).fill(false)
   );
@@ -16,26 +17,25 @@ function ProductCard({ prop }) {
 
   return (
     <div className="container smartphones mt-5">
-      <h1>
+      {/* <h1>
         {prop.length > 0
           ? prop[0].category
             ? prop[0].category.charAt(0).toUpperCase() +
               prop[0].category.slice(1)
             : "Default Category"
           : "Default Category"}
-      </h1>
+      </h1> */}
       <div>
         {Array.isArray(prop) &&
           prop.map((v, i) => (
-            <div className="cards">
+            <div className="cards" key={v.id}>
               <Link
-                key={v.id}
                 to={`/details/${v.id}`}
                 className="card-link"
                 style={{ textDecoration: "none" }}
               >
                 <div>
-                  <img src={v.thumbnail} alt="" />
+                  <img src={v.imgUrl} alt="" />
                 </div>
               </Link>
               <div className="card-details-sec">

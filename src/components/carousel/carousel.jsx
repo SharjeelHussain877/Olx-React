@@ -3,25 +3,6 @@
 // import './carousel.scss'
 import { olxMain } from "./../../assets/index.js";
 
-// const OlxCarousel = () => {
-//   return (
-//     <div className="carousel">
-//       <Carousel autoplay>
-//       <div>
-//         <img src={olxMain} alt="olx-carousel-img" />
-//       </div>
-//       <div>
-//         <img src={olxMain} alt="olx-carousel-img" />
-//       </div>
-//       <div>
-//         <img src={olxMain} alt="olx-carousel-img" />
-//       </div>
-//     </Carousel>
-//     </div>
-//   );
-// };
-
-// export default OlxCarousel;
 
 import { Carousel } from "react-bootstrap";
 
